@@ -1,7 +1,7 @@
 Google GKE Setup
 =========
 
-Ansible role to setup a bastion server to connect with a cce cluster
+Ansible role to setup a bastion server to connect with a GKE cluster
 
 
 
@@ -14,7 +14,7 @@ Example Playbook
   remote_user: "root"
 
   roles:
-    - role: ansible-role-huawei-cce-setup
+    - role: ansible-role-google-setup
       CLUSTER_NAME: "{{ lookup('env', 'CLUSTER_NAME') }}"
       LOCATION: "{{ lookup('env', 'LOCATION') }}"
       PROJECT_ID: "{{ lookup('env', 'PROJECT_ID') }}"
